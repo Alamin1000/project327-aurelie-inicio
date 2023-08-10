@@ -868,3 +868,55 @@ p:last-child{
 .footer-bottom__inner p {color: #9facd5;line-height: 36px;margin-bottom: 0px;}
 
 /* --- footer-css---end */
+
+
+/* ---s-hero-section--- */
+.s-hero-section {
+  padding: 50px 0 40px;
+  background: url('images/s-hero-bg.png') no-repeat center center/cover, #16275C;
+  /* background: url('images/s-hero-bg.png') no-repeat left center/auto 100%, #16275C; */
+  color: #fff;
+}
+.s-hero-section__inner {
+
+}
+.s-hero-row {
+
+}
+.s-hero-content {
+
+}
+.s-hero-content .h1 {
+  font-size: 30px;
+}
+.s-hero-content p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #aeb2bd;
+}
+/* ---s-hero-section---end */
+
+
+
+/* ---services-section--- */
+.service-section {
+  padding: 30px 0 150px;
+}
+.service-section__inner {
+
+}
+.service-s__row {
+
+}
+.service-s__row__main-side {
+  margin-right: -14px;
+}
+
+.cont-media {
+  border: 1px solid red;
+}
+
+.bbx-box {
+  border: 1px solid red;
+}
+/* ---services-section---end */
