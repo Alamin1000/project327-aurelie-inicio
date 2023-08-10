@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Hello World!</title>
+    <title>COMETA</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/default-edit.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <!--End ALL STYLESHEET -->
@@ -29,26 +30,25 @@
       <div class="offcanvas-menu">
         <ul class="offmenu" id="menuParent">
           <a href="#" class="offcanvas-close"><i class="fa fa-times"></i></a>
-          <li class="active"><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li class="dropdown">
-            <a href="#" data-bs-toggle="collapse" data-bs-target="#drop-menu1"
-              >OUR HORSES</a
-            >
-            <div
-              class="dropdown-menu-custom collapse"
-              id="drop-menu1"
-              data-bs-parent="#menuParent"
-            >
-              <ul>
-                <li><a href="#">YEARLINGS</a></li>
-                <li><a href="#">2 YEAR OLDS</a></li>
-                <li><a href="#">3 YEAR OLD PLUS</a></li>
-              </ul>
+          <li>
+            <a class="active dropdown-toggle" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Inicio</a>
+            <div class="collapse" id="collapseExample">
+              <div class="py-2">
+                <ul class="off-submenu">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Leadership Team</a></li>
+                    <li><a href="">Why Choose Us</a></li>
+                    <li><a href="">Testimonials</a></li>
+                    <li><a href="">Help & FAQs</a></li>
+                    <li><a href="">Find a Lab</a></li>
+                </ul>
+              </div>
             </div>
           </li>
-          <li><a href="#">LATEST NEWS</a></li>
-          <li><a href="#">CONTACT & FIND US</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Publicaciones</a></li>
+          <li><a href="#">Ayuda</a></li>
         </ul>
       </div>
       <div class="offcanvas-overlay"></div>
@@ -70,11 +70,26 @@
                   <a href="#"><i class="fab fa-twitter"></i></a>
                 </li>
               </ul>
-              <a href="#note-section" class="ht-enter-a">
-                <span>Ingresar</span>
-                <br />
-                <i class="fas fa-caret-down"></i>
-              </a>
+              <div class="dropdown">
+                <a href="#" class="ht-enter-a" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span>Ingresar</span>
+                  <br />
+                  <i class="fas fa-caret-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="user_form">
+                    <div class="user_input">
+                      <input type="text" placeholder="Usuario" name="" id="">
+                    </div>
+                    <div class="user_input">
+                      <input type="text" placeholder="Contraseña" name="" id="">
+                    </div>
+                    <div class="user_submit w-100">
+                      <button type="submit" class="default-button w-100">Iniciar sesión</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -85,20 +100,49 @@
                 <!-- logo-1-here  logo-here-->
                 <img src="images/logo-1.png" alt="" />
               </a>
-              <div class="main-menu">
+
+              <div class="main-menu d-none d-lg-block">
                 <ul>
-                  <li><a class="active" href="#">Inicio</a></li>
-                  <li><a href="#">Acercade</a></li>
+                  <li>
+                    <a class="active" href="#">Inicio</a>
+                    <ul class="submenu">
+                      <li><a href="">About Us</a></li>
+                      <li><a href="">Leadership Team</a></li>
+                      <li>
+                        <a href="">Why Choose Us</a>
+                        <ul class="submenu">
+                          <li><a href="">About Us</a></li>
+                          <li><a href="">Leadership Team</a></li>
+                          <li><a href="">Why Choose Us</a></li>
+                          <li><a href="">Testimonials</a></li>
+                          <li><a href="">Help & FAQs</a></li>
+                          <li><a href="">Find a Lab</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Testimonials</a></li>
+                      <li><a href="">Help & FAQs</a></li>
+                      <li><a href="">Find a Lab</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Acerca de</a></li>
                   <li><a href="#">Servicios</a></li>
                   <li><a href="#">Publicaciones</a></li>
                   <li><a href="#">Ayuda</a></li>
                 </ul>
               </div>
 
+              <!-- offcanvas-menu-bar -->
+              <div class="d-lg-none">
+                <span class="offcanvas-open"><i class="fas fa-bars"></i></span>
+              </div>
+              <!-- offcanvas-menu-bar-end -->
+
               <a href="index.html" class="header__logo__2">
                 <!-- logo-2-here  logo-here-->
                 <img src="images/logo-2.png" alt="" />
               </a>
+
+
             </div>
           </div>
         </div>
@@ -108,25 +152,80 @@
       <!-- main -->
       <main>
         <!-- hero-section -->
-        <section class="hero-section">
-          <div class="container">
-            <div class="hero-section__inner">
-              <div class="hero__content">
-                <h1 class="h1">Noticia destacada</h1>
-                <p>
-                  Introducción a, la noticia, Introducción a la noticia,
-                  <br class="d-md-block d-none" />
-                  Introducción a la noticia, Introducción a la noticia,
-                  Introducción <br class="d-md-block d-none" />
-                  a la noticia...
-                </p>
-                <a href="#" class="default-button bottom-button">
-                  <i class="fas fa-caret-right"></i>
-                  <span class="text">Leer</span>
-                </a>
+        <section class="hero-wrapper hero-slide-active swiper">
+          <div class="swiper-wrapper">
+
+            <!-- single-slide -->
+            <div class="hero-section swiper-slide" style="background-image: url('images/hero-image.png');">
+              <div class="container">
+                <div class="hero-section__inner">
+                  <div class="hero__content">
+                    <h1 class="h1">Noticia destacada</h1>
+                    <p>
+                      Introducción a, la noticia, Introducción a la noticia,
+                      <br class="d-md-block d-none" />
+                      Introducción a la noticia, Introducción a la noticia,
+                      Introducción <br class="d-md-block d-none" />
+                      a la noticia...
+                    </p>
+                    <a href="#" class="default-button bottom-button">
+                      <i class="fas fa-caret-right"></i>
+                      <span class="text">Leer</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- single-slide-end -->
+
+            <!-- single-slide -->
+            <div class="hero-section swiper-slide" style="background-image: url('images/hero-img-2.jpg');">
+              <div class="container">
+                <div class="hero-section__inner">
+                  <div class="hero__content">
+                    <h1 class="h1">Noticia destacada</h1>
+                    <p>
+                      Introducción a, la noticia, Introducción a la noticia,
+                      <br class="d-md-block d-none" />
+                      Introducción a la noticia, Introducción a la noticia,
+                      Introducción <br class="d-md-block d-none" />
+                      a la noticia...
+                    </p>
+                    <a href="#" class="default-button bottom-button">
+                      <i class="fas fa-caret-right"></i>
+                      <span class="text">Leer</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single-slide-end -->
+
+            <!-- single-slide -->
+            <div class="hero-section swiper-slide" style="background-image: url('images/hero-img-3.jpg');">
+              <div class="container">
+                <div class="hero-section__inner">
+                  <div class="hero__content">
+                    <h1 class="h1">Noticia destacada</h1>
+                    <p>
+                      Introducción a, la noticia, Introducción a la noticia,
+                      <br class="d-md-block d-none" />
+                      Introducción a la noticia, Introducción a la noticia,
+                      Introducción <br class="d-md-block d-none" />
+                      a la noticia...
+                    </p>
+                    <a href="#" class="default-button bottom-button">
+                      <i class="fas fa-caret-right"></i>
+                      <span class="text">Leer</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- single-slide-end -->
+
           </div>
+          <div class="swiper-pagination"></div>
         </section>
         <!-- hero-section end -->
 
@@ -138,8 +237,8 @@
                 <h2 class="h2 mb-0">Noticias</h2>
               </div>
 
-              <div class="note__row row">
-                <div class="col-lg-4">
+              <div class="note__row row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                   <div class="note-blk">
                     <img class="img" src="images/note-1.png" alt="" />
                     <div class="note-blk__content">
@@ -151,7 +250,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                   <div class="row">
                     <div class="col-12">
                       <div class="note-blk">
@@ -179,7 +278,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                   <img
                     src="images/calendar.png"
                     alt=""
@@ -200,66 +299,93 @@
                 <h2 class="h2 mb-0">Publicaciones recientes</h2>
               </div>
 
-              <div class="post-row row">
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a
-                    href="#"
-                    class="post-single"
-                    style="
-                      background: url('images/post-1.png') no-repeat center
-                        center/cover;
-                    "
-                  >
-                    <div class="post__content">
-                      <h4 class="mb-0">Medicina</h4>
-                      <h4 class="mb-0 right">10</h4>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a
-                    href="#"
-                    class="post-single"
-                    style="
-                      background: url('images/post-2.png') no-repeat center
-                        center/cover;
-                    "
-                  >
-                    <div class="post__content">
-                      <h4 class="mb-0">Tecnología</h4>
-                      <h4 class="mb-0 right">5</h4>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a
-                    href="#"
-                    class="post-single"
-                    style="
-                      background: url('images/post-3.png') no-repeat center
-                        center/cover;
-                    "
-                  >
-                    <div class="post__content">
-                      <h4 class="mb-0">Oceanología</h4>
-                      <h4 class="mb-0 right">3</h4>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a
-                    href="#"
-                    class="post-single"
-                    style="
-                      background: url('images/post-4.png') no-repeat center
-                        center/cover;
-                    "
-                  >
-                    <div class="post__content">
-                      <h4 class="mb-0">Comunicación</h4>
-                      <h4 class="mb-0 right">11</h4>
-                    </div>
-                  </a>
+              <div class="post-row swiper row justify-content-center">
+                <div class="swiper-wrapper">
+                  <div class="col-12 swiper-slide">
+                    <a
+                      href="#"
+                      class="post-single"
+                    >
+                    <div class="post_child" style="background: url('images/post-1.png') no-repeat center center/cover;"></div>
+                      <div class="post__content">
+                        <h4 class="mb-0">Medicina</h4>
+                        <h4 class="mb-0 right">10</h4>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 swiper-slide">
+                    <a
+                      href="#"
+                      class="post-single"
+                      
+                    >
+                    <div class="post_child" style="background: url('images/post-2.png') no-repeat center center/cover;"></div>
+                      <div class="post__content">
+                        <h4 class="mb-0">Tecnología</h4>
+                        <h4 class="mb-0 right">5</h4>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 swiper-slide">
+                    <a
+                      href="#"
+                      class="post-single"
+                    >
+                    <div class="post_child" style="background: url('images/post-3.png') no-repeat center center/cover;"></div>
+                      <div class="post__content">
+                        <h4 class="mb-0">Oceanología</h4>
+                        <h4 class="mb-0 right">3</h4>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 swiper-slide">
+                    <a
+                      href="#"
+                      class="post-single"
+                    >
+                    <div class="post_child" style="background: url('images/post-4.png') no-repeat center center/cover;"></div>
+                      <div class="post__content">
+                        <h4 class="mb-0">Comunicación</h4>
+                        <h4 class="mb-0 right">11</h4>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 swiper-slide">
+                    <a
+                      href="#"
+                      class="post-single"
+                    >
+                    <div class="post_child" style="background: url('images/biologia.jpg') no-repeat center center/cover;"></div>
+                      <div class="post__content">
+                        <h4 class="mb-0">Biología</h4>
+                        <h4 class="mb-0 right">11</h4>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 swiper-slide">
+                    <a
+                      href="#"
+                      class="post-single"
+                    >
+                    <div class="post_child" style="background: url('images/fisica.jpg') no-repeat center center/cover;"></div>
+                      <div class="post__content">
+                        <h4 class="mb-0">Física </h4>
+                        <h4 class="mb-0 right">11</h4>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 swiper-slide">
+                    <a
+                      href="#"
+                      class="post-single"
+                    >
+                    <div class="post_child" style="background: url('images/geologia.jpg') no-repeat center center/cover;"></div>
+                      <div class="post__content">
+                        <h4 class="mb-0">Geología</h4>
+                        <h4 class="mb-0 right">11</h4>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -275,13 +401,13 @@
                 <h2 class="h2 mb-0">Listado de entradas</h2>
                 <div class="search-x">
                   <i class="far fa-search search-icon"></i>
-                  <input type="text" class="input" placeholder="Search..." />
+                  <input type="text" class="input" placeholder="Buscar..." />
                 </div>
               </div>
 
               <div class="ticket-table-box">
-                <div class="ticket-list-table">
-                  <table>
+                <div class="ticket-list-table table-responsive">
+                  <table class="table table-borderless mb-0">
                     <thead>
                       <tr>
                         <td>
@@ -518,7 +644,7 @@
                       <li>
                         <a href="#">
                           <div class="icon">
-                            <i class="fab fa-caret-right"></i>
+                            <img src="images/aurelie-inicio.png" alt="">
                           </div>
                           <div class="text">Opción 1 de la opción 1</div>
                         </a>
@@ -526,7 +652,7 @@
                       <li>
                         <a href="#">
                           <div class="icon">
-                            <i class="fab fa-caret-right"></i>
+                            <img src="images/aurelie-inicio.png" alt="">
                           </div>
                           <div class="text">Opción 2 de la opción 1</div>
                         </a>
@@ -534,7 +660,7 @@
                       <li>
                         <a href="#">
                           <div class="icon">
-                            <i class="fab fa-caret-right"></i>
+                            <img src="images/aurelie-inicio.png" alt="">
                           </div>
                           <div class="text">Opción 3 de la opción 1</div>
                         </a>
@@ -542,7 +668,7 @@
                       <li>
                         <a href="#">
                           <div class="icon">
-                            <i class="fab fa-caret-right"></i>
+                            <img src="images/aurelie-inicio.png" alt="">
                           </div>
                           <div class="text">Opción 4 de la opción 1</div>
                         </a>
@@ -557,7 +683,7 @@
                       <li>
                         <a href="#">
                           <div class="icon">
-                            <i class="fab fa-caret-right"></i>
+                            <img src="images/aurelie-inicio.png" alt="">
                           </div>
                           <div class="text">Opción 1 de la opción 2</div>
                         </a>
@@ -565,7 +691,7 @@
                       <li>
                         <a href="#">
                           <div class="icon">
-                            <i class="fab fa-caret-right"></i>
+                            <img src="images/aurelie-inicio.png" alt="">
                           </div>
                           <div class="text">Opción 2 de la opción 2</div>
                         </a>
@@ -575,11 +701,11 @@
                 </div>
                 <div class="col-md">
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 mb-3">
                       <h3>752</h3>
                       <p>PUBLICACIONES</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 mb-3">
                       <h3>129</h3>
                       <p>MIEMBROS</p>
                     </div>
@@ -622,6 +748,7 @@
     <!-- js -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/main.js"></script>
     <!-- End All Js -->
